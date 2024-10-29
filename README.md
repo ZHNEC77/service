@@ -17,8 +17,8 @@
 
 Склонируйте репозиторий на ваш локальный компьютер:
 
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/ZHNEC77/service
+cd service
 
 
 ### 2. Установка зависимостей
