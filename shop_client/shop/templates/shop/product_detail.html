@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Detail</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>Price: {{ product.price.amount }} {{ product.price.currency }}</p>
+    <p>Quantity: {{ product.quantity }}</p>
+    <p>Barcode: {{ product.barcode }}</p>
+    <p>Type: {{ product.type.name }}</p>
+    <form action="{% url 'decrease_quantity' product.id %}" method="post">
+        {% csrf_token %}
+        <input type="number" name="quantity" min="1" required>
+        <button type="submit">Decrease Quantity</button>
+    </form>
+</body>
+</html>
